@@ -12,13 +12,11 @@ Interface web para a [FraseCertaAPI](https://github.com/vitoroliveirasilva/Frase
 
 ## 🚀 Deploy
 
-Este projeto pode ser hospedado facilmente em serviços como:
+A aplicação está hospedada em:
 
-- [Netlify](https://netlify.com)
-- [Vercel](https://vercel.com)
-- GitHub Pages
+🔗 **[https://frasecerta.netlify.app/](https://frasecerta.netlify.app/)**
 
-Você também pode abrir o arquivo `index.html` localmente em qualquer navegador moderno.
+É possível também abrir o arquivo `index.html` localmente em qualquer navegador moderno seguindo as instruções de [como usar](#como-usar).
 
 ## 🛠️ Como usar
 
