@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Cores principais */
+  --cor-bg-gradiente: linear-gradient(135deg, #141e30, #243b55);
+  --cor-texto: #ffffff;
+  --cor-destaque: #9bbcff;
+
+  /* Cores auxiliares */
+  --cor-card-bg: rgba(255, 255, 255, 0.05);
+  --cor-card-borda: rgba(255, 255, 255, 0.15);
+  --cor-card-box-shadow: rgba(0, 0, 0, 0.3);
+  --cor-card-box-inset: rgba(0, 0, 0, 0.1);
+
+  --cor-box-bg: rgba(255, 255, 255, 0.07);
+
+  /* Botão */
+  --cor-botao-gradiente: linear-gradient(to right, #8e2de2, #4a00e0);
+  --cor-botao-sombra: rgba(72, 0, 200, 0.4);
+  --cor-botao-hover: rgba(72, 0, 200, 0.6);
+
+  /* Tipografia */
+  --fonte: 'Exo 2', sans-serif;
+
+  /* Outros */
+  --raio-borda: 20px;
+  --raio-borda-menor: 10px;
+  --tempo-transicao: 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte);
+}
+
+body {
+  height: 100vh;
+  background: var(--cor-bg-gradiente);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--cor-texto);
+  position: relative;
+}
+
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, #7f00ff, transparent);
+  opacity: 0.3;
+  z-index: 0;
+  filter: blur(100px);
+}
+
+.card {
+  z-index: 1;
+  background: var(--cor-card-bg);
+  border: 1px solid var(--cor-card-borda);
+  box-shadow: 0 8px 40px var(--cor-card-box-shadow);
+  border-radius: var(--raio-borda);
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 600px;
+  backdrop-filter: blur(25px);
+  animation: fadeInCard 0.6s ease-out forwards;
+  transform: scale(0.97);
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.phrase-box {
+  padding: 20px;
+  margin-bottom: 30px;
+  background: var(--cor-box-bg);
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px var(--cor-card-box-inset);
+}
+
+.quote {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+.author {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-destaque);
+  text-align: right;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+.select, .button {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--raio-borda-menor);
+  outline: none;
+  transition: var(--tempo-transicao);
+}
+
+.select {
+  background: #ffffff;
+  color: #222;
+}
+
+.button {
+  background: var(--cor-botao-gradiente);
+  color: var(--cor-texto);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px var(--cor-botao-sombra);
+}
+
+.button:hover {
+  box-shadow: 0 8px 18px var(--cor-botao-hover);
+}
