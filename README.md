@@ -1,2 +1,71 @@
-# FraseCertaFrontEnd
-Interface web da FraseCertaAPI, exibe frases motivacionais com opção de idioma (pt/en) e geração dinâmica de novas mensagens.
+# Frase Certa - Front-End
+
+Interface web para a [FraseCertaAPI](https://github.com/vitoroliveirasilva/FraseCertaAPI), que exibe frases motivacionais aleatórias com suporte a múltiplos idiomas, animações suaves e visual moderno.
+
+## ✨ Funcionalidades
+
+- ✅ Exibe frases motivacionais aleatórias com animações
+- ✅ Mostra o autor da frase (ou "Desconhecido" se não informado)
+- ✅ Suporte a idiomas: **Português** (padrão) e **Inglês**
+- ✅ Interface bonita, responsiva e animada
+- ✅ Alternância de idioma dinâmica sem recarregar a página
+
+## 🚀 Deploy
+
+Este projeto pode ser hospedado facilmente em serviços como:
+
+- [Netlify](https://netlify.com)
+- [Vercel](https://vercel.com)
+- GitHub Pages
+
+Você também pode abrir o arquivo `index.html` localmente em qualquer navegador moderno.
+
+## 🛠️ Como usar
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/vitoroliveirasilva/FraseCertaFrontEnd.git
+cd FraseCertaFrontEnd
+````
+
+2. Abra o arquivo `index.html` no seu navegador.
+
+> 💡 Não é necessário configurar um servidor backend local, pois o site consome diretamente a API em nuvem.
+
+## 🌐 API Utilizada
+
+A aplicação consome a [FraseCertaAPI](https://github.com/vitoroliveirasilva/FraseCertaAPI), disponível publicamente em:
+
+```
+https://frasecertaapi-680953228709.us-central1.run.app/frase?lang=pt
+```
+
+Parâmetros aceitos:
+
+* `lang=pt` → Frase em Português
+* `lang=en` → Frase em Inglês
+
+## 📁 Estrutura do Projeto
+
+```
+FraseCertaFrontEnd/
+├── index.html
+└── src/
+    └── css/
+    │   └── style.css
+    └── js/
+        └── script.js
+```
+
+## 👤 Autor
+
+**Vitor Oliveira Silva**
+🔗 [https://github.com/vitoroliveirasilva/FraseCertaFrontEnd](https://github.com/vitoroliveirasilva/FraseCertaFrontEnd)
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a Licença MIT.
+O arquivo da licença está disponível na raiz do repositório: [`LICENSE`](./LICENSE)
