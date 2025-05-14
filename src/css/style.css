@@ -35,15 +35,26 @@
   font-family: var(--fonte);
 }
 
-body {
-  height: 100vh;
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html {
   background: var(--cor-bg-gradiente);
+}
+
+body {
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  flex-direction: column;
   color: var(--cor-texto);
   position: relative;
+  padding: 20px;
 }
 
 .background-glow {
@@ -63,7 +74,7 @@ body {
   box-shadow: 0 8px 40px var(--cor-card-box-shadow);
   border-radius: var(--raio-borda);
   padding: 40px 30px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   backdrop-filter: blur(25px);
   animation: fadeInCard 0.6s ease-out forwards;
@@ -97,6 +108,9 @@ body {
   text-align: center;
   line-height: 1.6;
   min-height: 80px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .author {
@@ -139,4 +153,53 @@ body {
 
 .button:hover {
   box-shadow: 0 8px 18px var(--cor-botao-hover);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+    min-height: 60px;
+  }
+
+  .author {
+    font-size: 0.95rem;
+  }
+
+  .select, .button {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-top: 20px;
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .author {
+    font-size: 0.9rem;
+  }
+
+  .select, .button {
+    font-size: 0.9rem;
+  }
 }
