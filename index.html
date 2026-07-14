@@ -11,21 +11,22 @@
 </head>
 
 <body>
-  <div class="background-glow"></div>
+  <div class="background-glow" aria-hidden="true"></div>
 
   <main class="card">
     <h1 class="title">💬 Frase Certa</h1>
-    <div class="phrase-box">
+    <div class="phrase-box" aria-live="polite" aria-atomic="true">
       <p id="quote" class="quote">Carregando...</p>
       <p id="author" class="author">...</p>
     </div>
 
     <div class="controls">
+      <label for="language" class="sr-only">Idioma da frase</label>
       <select id="language" class="select">
         <option value="pt" selected>Português</option>
         <option value="en">Inglês</option>
       </select>
-      <button id="new-quote" class="button">Nova Frase</button>
+      <button id="new-quote" class="button" type="button">Nova Frase</button>
     </div>
   </main>
 

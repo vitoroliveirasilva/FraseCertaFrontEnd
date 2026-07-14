@@ -9,6 +9,7 @@ Interface web para a [FraseCertaAPI](https://github.com/vitoroliveirasilva/Frase
 - ✅ Suporte a idiomas: **Português** (padrão) e **Inglês**
 - ✅ Interface bonita, responsiva e animada
 - ✅ Alternância de idioma dinâmica sem recarregar a página
+- ✅ Navegação por teclado com foco visível e suporte a leitores de tela
 
 ## 🚀 Deploy
 
@@ -25,11 +26,20 @@ A aplicação está hospedada em:
 ```bash
 git clone https://github.com/vitoroliveirasilva/FraseCertaFrontEnd.git
 cd FraseCertaFrontEnd
-````
+```
 
 2. Abra o arquivo `index.html` no seu navegador.
 
 > 💡 Não é necessário configurar um servidor backend local, pois o site consome diretamente a API em nuvem.
+
+## ♿ Acessibilidade
+
+A interface inclui recursos básicos para facilitar o uso com teclado e tecnologias assistivas:
+
+- foco visível no seletor de idioma e no botão de nova frase;
+- rótulo acessível associado ao seletor de idioma;
+- anúncio das novas frases por meio de uma região dinâmica;
+- elementos puramente visuais ignorados por leitores de tela.
 
 ## 🌐 API Utilizada
 
